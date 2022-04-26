@@ -1,0 +1,27 @@
+{
+  "name": "nft-preview-card-component-main",
+  "version": "1.0.0",
+  "description": "challenge frontend mentor",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielaDominguez/nft-preview-card-component.git"
+  },
+  "keywords": [
+    "html5",
+    "css3",
+    "sass"
+  ],
+  "author": "Daniela Domínguez Peña",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanielaDominguez/nft-preview-card-component/issues"
+  },
+  "homepage": "https://github.com/DanielaDominguez/nft-preview-card-component#readme",
+  "devDependencies": {
+    "sass": "^1.51.0"
+  }
+}

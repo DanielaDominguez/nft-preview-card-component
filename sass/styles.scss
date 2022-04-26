@@ -1,0 +1,161 @@
+@use 'index/index';
+@use 'sass:map';
+
+*,
+::after,
+::before {
+    @include index.resetStyleSheet;
+}
+
+html {
+    @include index.setHTML;
+}
+
+.main {
+    min-height: 100vh;
+    background-color: map.get(index.$neutralColors, "darkBlueMainBG");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0;
+
+    .card {
+        width: 370px;
+        background-color: map.get(index.$neutralColors, "darkBlueCardBG");
+        overflow: hidden;
+        padding: 30px 30px 10px 30px;
+        border-radius: 15px;
+
+        .card__figure {
+            width: 100%;
+            height: 60%;
+            cursor: pointer;
+            position: relative;
+
+            .card__img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+
+            &:hover .card__active {
+                transform: scale(1);
+                transition: none;
+            }
+
+            .card__active {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: rgb(0, 255, 247, 0.4);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 10px;
+                transform: scale(0);
+                transition: none;
+            }
+        }
+
+        .card__texts {
+            margin: 30px 0;
+
+            .card__title {
+                color: map.get(index.$neutralColors, "white");
+                font-weight: index.$outfitW600;
+                margin-bottom: 20px;
+                cursor: pointer;
+
+                &:hover {
+                    color: map.get(index.$primaryColors, "cyan");
+                }
+            }
+
+            .card__paragraph {
+                color: map.get(index.$primaryColors, "softBlue");
+                font-size: index.$sizeParagraph;
+                font-weight: index.$outfitW400;
+                margin-bottom: 30px;
+
+            }
+
+            .card__details {
+                display: flex;
+                justify-content: space-between;
+                border-bottom: 1px solid map.get(index.$neutralColors, "darkBlueLine");
+                margin-bottom: 20px;
+                padding-bottom: 30px;
+
+                .details__figure {
+                    display: flex;
+                    gap: 8px;
+
+                    .details__img {
+                        display: block;
+                        object-fit: contain;
+                    }
+
+                    .details__caption {
+                        font-size: 18px;
+                        object-fit: contain;
+
+                        &--quantity {
+                            color: map.get(index.$primaryColors, "cyan");
+                        }
+
+                        &--time {
+                            color: map.get(index.$primaryColors, "softBlue");
+                        }
+                    }
+                }
+            }
+
+            .card__username {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+
+                .card__border {
+                    width: 45px;
+                    height: 45px;
+                    border-radius: 50%;
+                    background-color: white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .username__img {
+                        display: block;
+                        width: 97%;
+                        height: 97%;
+                        object-fit: contain;
+                    }
+                }
+
+                .username__name {
+                    font-size: 20px;
+                    color: map.get(index.$primaryColors, "softBlue");
+
+                    .name__mark {
+                        color: map.get(index.$neutralColors, "white");
+                        cursor: pointer;
+
+                        &:hover {
+                            color: map.get(index.$primaryColors, "cyan");
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .attribution {
+        margin-top: 50px;
+        color: white;
+    }
+}

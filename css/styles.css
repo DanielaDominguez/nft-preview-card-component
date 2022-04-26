@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+*,
+::after,
+::before {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Outfit", sans-serif;
+}
+
+.main {
+  min-height: 100vh;
+  background-color: hsl(217deg, 54%, 11%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 0;
+}
+.main .card {
+  width: 370px;
+  background-color: hsl(216deg, 50%, 16%);
+  overflow: hidden;
+  padding: 30px 30px 10px 30px;
+  border-radius: 15px;
+}
+.main .card .card__figure {
+  width: 100%;
+  height: 60%;
+  cursor: pointer;
+  position: relative;
+}
+.main .card .card__figure .card__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.main .card .card__figure:hover .card__active {
+  transform: scale(1);
+  transition: none;
+}
+.main .card .card__figure .card__active {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 255, 247, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  transform: scale(0);
+  transition: none;
+}
+.main .card .card__texts {
+  margin: 30px 0;
+}
+.main .card .card__texts .card__title {
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 600;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.main .card .card__texts .card__title:hover {
+  color: hsl(178deg, 100%, 50%);
+}
+.main .card .card__texts .card__paragraph {
+  color: hsl(215deg, 51%, 70%);
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+.main .card .card__texts .card__details {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid hsl(215deg, 32%, 27%);
+  margin-bottom: 20px;
+  padding-bottom: 30px;
+}
+.main .card .card__texts .card__details .details__figure {
+  display: flex;
+  gap: 8px;
+}
+.main .card .card__texts .card__details .details__figure .details__img {
+  display: block;
+  object-fit: contain;
+}
+.main .card .card__texts .card__details .details__figure .details__caption {
+  font-size: 18px;
+  object-fit: contain;
+}
+.main .card .card__texts .card__details .details__figure .details__caption--quantity {
+  color: hsl(178deg, 100%, 50%);
+}
+.main .card .card__texts .card__details .details__figure .details__caption--time {
+  color: hsl(215deg, 51%, 70%);
+}
+.main .card .card__texts .card__username {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.main .card .card__texts .card__username .card__border {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .card .card__texts .card__username .card__border .username__img {
+  display: block;
+  width: 97%;
+  height: 97%;
+  object-fit: contain;
+}
+.main .card .card__texts .card__username .username__name {
+  font-size: 20px;
+  color: hsl(215deg, 51%, 70%);
+}
+.main .card .card__texts .card__username .username__name .name__mark {
+  color: hsl(0deg, 0%, 100%);
+  cursor: pointer;
+}
+.main .card .card__texts .card__username .username__name .name__mark:hover {
+  color: hsl(178deg, 100%, 50%);
+}
+.main .attribution {
+  margin-top: 50px;
+  color: white;
+}
+
+/*# sourceMappingURL=styles.css.map */
